@@ -1,0 +1,21 @@
+
+.jumbotron{
+    @include span-columns(6);
+    @include shift(3);
+    padding: 5rem;
+    margin-top: 3rem;
+    margin-bottom: 8rem;
+    text-align: center;
+    @include border-top-radius(0.3rem);
+    @include border-bottom-radius(0.3rem);
+    background: map-get($colorsNeutralScale, neutralBg);
+}
+
+.marketing{
+    @include span-columns(12);
+
+    .box{
+        @include span-columns(4 of 12);
+        @include omega(3n);
+    }
+}

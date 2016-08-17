@@ -1,0 +1,77 @@
+.marker{
+    width: 1.25rem;
+    height: 1.25rem;
+    border: solid 0.1rem map-get($colorsMainScale, darken);
+    border-radius: 50%;
+    display: block;
+}
+
+.scroll-table-default{
+    position: relative;
+    overflow: hidden;
+    overflow-y: auto;
+    max-height: 20rem;
+}
+
+.table-default{
+    width:100%;
+
+
+    th{
+        text-align:left;
+        color: #000;
+        font-size:1.2rem;
+        border: 0 solid map-get($colorsNeutralScale, neutralBd);
+        border-left: 0;
+        padding: 0.5rem 1rem;
+        background: #fff;
+    }
+
+    td{
+        color: map-get($colorsFonts, default);
+        font-size:1.2rem;
+        border: 0.1rem solid  map-get($colorsNeutralScale, neutralBd);
+        padding: 0.5rem 1rem;
+        border-right:none;
+        text-align:left;
+
+        &:first-child{
+            border-left:none;
+
+        }
+    }
+
+    tr{
+        &:nth-child(odd) td{
+            background: map-get($colorsNeutralScale, neutralBg);
+        }
+
+        &:hover td{
+            background: map-get($colorsApps, hovered);
+            cursor:pointer;
+        }
+
+        &.active td{
+            background: map-get($colorsApps, hovered);
+        }
+
+        &.active .marker{
+            background: map-get($colorsMainScale, darken);
+        }
+
+    }
+}
+.table-edicao{
+    border:solid 0.1rem map-get($colorsNeutralScale, neutralBd);
+    display:block;
+    float:left;
+    width:100%;
+    border-radius:0.3rem;
+
+    h1{
+        background: #f8f8f8;
+        font-size:1.67rem;
+        margin:0;
+        padding:1rem;
+    }
+}

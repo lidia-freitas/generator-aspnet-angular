@@ -1,0 +1,24 @@
+.main-header{
+    @include outer-container;
+    height: 6rem;
+    margin-bottom: 3rem;
+    border-bottom: 0.1rem solid map-get($colorsNeutralScale, neutralBd);
+}
+
+.navbar{
+    @include span-columns(12);
+}
+
+.navbar-header{
+    @include span-columns(2);
+    padding: 1.9rem 0;
+}
+
+.collapse{
+    @include span-columns(10);
+
+    li{
+        display: inline;
+        margin-right: 2rem;
+    }
+}

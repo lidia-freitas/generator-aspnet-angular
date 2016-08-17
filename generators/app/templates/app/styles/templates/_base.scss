@@ -1,0 +1,33 @@
+html{
+    font-size: 10px;
+    height: 100%;
+}
+
+body{
+    font-size: 1.6rem;
+    line-height: 1.4;
+    font-family: sans-serif;
+    height: 100%;
+    position: relative;
+    padding: 0;
+}
+
+.outer{
+    width: 100%;
+    height: auto;
+    padding-bottom: 4rem;
+    min-height: 100%
+}
+
+.wrapper{
+    @include outer-container;
+}
+
+a{
+    color: map-get($colorsBranding, mainFeat);
+}
+
+.main-container{
+    @include outer-container;
+
+}

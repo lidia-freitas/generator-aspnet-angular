@@ -1,0 +1,22 @@
+.main-footer{
+    @include outer-container;
+    min-width: 120rem;
+    height: 4rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: block;
+    position: absolute;
+    border-top: 0.1rem solid map-get($colorsNeutralScale, neutralBd);
+    bottom: 0;
+    padding: 1.3rem 0;
+    font-size: 1.2rem;
+
+    p{margin-bottom: 0;}
+
+    i{
+        font-size: 1.2rem;
+        margin-right: 0.5rem;
+        color: map-get($colorsNeutralScale, neutralBd);
+    }
+}

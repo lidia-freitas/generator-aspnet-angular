@@ -1,0 +1,88 @@
+@include keyframes(fade-in-transition){
+    from{
+        opacity: 0;
+        visibility: hidden;
+        z-index: -9;
+    }
+    to{
+        opacity: 1;
+        visibility: visible;
+        z-index: 9;
+    }
+};
+
+@include keyframes(fade-out-transition){
+    from{
+        opacity: 1;
+        visibility: visible;
+        z-index: 9;
+    }
+    to{
+        opacity: 0;
+        visibility:hidden;
+        z-index: -9;
+    }
+};
+
+@include keyframes(slide-top-in-transition){
+    from{
+        @include transform(translate3d(0, -100%, 0));
+    }
+    to{
+        @include transform(translate3d(0, 0, 0));
+    }
+};
+
+@include keyframes(slide-top-out-transition){
+    from{
+        @include transform(translate3d(0, 0, 0));
+    }
+    to{
+        @include transform(translate3d(0, -100%, 0));
+    }
+};
+
+@include keyframes(slide-left-in-transition){
+    from{
+        @include transform(translate3d(-100%, 0, 0));
+    }
+    to{
+        @include transform(translate3d(0%, 0, 0));
+    }
+};
+
+@include keyframes(slide-left-out-transition){
+    from{
+        @include transform(translate3d(0%, 0, 0));
+    }
+    to{
+        @include transform(translate3d(-100%, 0, 0));
+    }
+};
+
+@include keyframes(slide-right-in-transition){
+    from{
+        @include transform(translate3d(100%, 0, 0));
+    }
+    to{
+        @include transform(translate3d(0%, 0, 0));
+    }
+};
+
+@include keyframes(slide-right-out-transition){
+    from{
+        @include transform(translate3d(0%, 0, 0));
+    }
+    to{
+        @include transform(translate3d(100%, 0, 0));
+    }
+};
+
+@include keyframes (spinner-transition){
+    from{
+        @include transform(rotate(0deg));
+    }
+    to {
+        @include transform(rotate(-345deg));
+    }
+}
