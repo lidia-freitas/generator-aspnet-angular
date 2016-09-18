@@ -1,29 +1,28 @@
 (function () {
-    'use strict';
+  'use strict';
 
-    angular
-    .module('<%= name %>')
-    .controller('homeController', homeController);
+  angular
+  .module('<%= name %>')
+  .controller('homeController', homeController);
 
-    function homeController() {
-        var vm = this;
+  function homeController() {
+    var vm = this;
 
-        angular.extend(vm, {
-            publicFunction: publicFunction
-        });
+    angular.extend(vm, {
+      publicFunction: publicFunction
+    });
 
-        activate();
+    activate();
 
-        function activate() {
-            vm.awesomeThings = [
-                'HTML5 Boilerplate',
-                'AngularJS',
-                'Karma'
-            ];
-        }
-
-        function publicFunction() {
-
-        }
+    function activate() {
+      vm.awesomeThings = [
+        'HTML5 Boilerplate',
+        'AngularJS',
+        'Karma'
+      ];
     }
+
+    function publicFunction() {
+    }
+  }
 })();

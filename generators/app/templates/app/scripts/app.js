@@ -1,10 +1,10 @@
 (function () {
-    'use strict';
+  'use strict';
 
-    angular
-      .module('<%= name %>', [
-          'ngAnimate',
-          'ngResource',
-          'ngRoute'
-      ]);
+  angular
+  .module('<%= name %>', [
+    'ngAnimate',
+    'ngResource',
+    'ngRoute'
+  ]);
 })();

@@ -6,7 +6,7 @@
   "author": {
     "name": "@lidia_defreitas",
     "email": "lydiaoliveira@gmail.com",
-    "url": "lidiafreitas.com.br"
+    "url": "http://lidiafreitas.com.br"
   },
   "files": [
     "generators"
@@ -39,6 +39,11 @@
   },
   "eslintConfig": {
     "extends": "xo-space",
+    "globals": {
+        "angular": false,
+        "inject": false,
+        "expect": false
+    },
     "env": {
       "mocha": true
     }

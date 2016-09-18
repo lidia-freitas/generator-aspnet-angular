@@ -25,22 +25,22 @@ module.exports = yeoman.Base.extend({
   },
 
   writing: function () {
-    var path1 = 'Web.config';
+    var path1 = this.templatePath('_Web.config');
     var hook1 = '</system.webServer>';
     var file1 = fileToRead.readFileAsString(path1);
     var insert1 = '<staticContent> \n <mimeMap fileExtension=".json" mimeType="application/json" /> \n </staticContent> \n <rewrite> \n <rules> \n <rule name="vendor redirection" stopProcessing="true"> \n <match url="^(.*)/(bower_components)/(.*)" ignoreCase="false" /> \n <conditions logicalGrouping="MatchAll"> \n <add input="{HTTP_HOST}" pattern="localhost" negate="false"/> \n </conditions> \n <action type="Rewrite" url="./bower_components/{R:3}" redirectType="Permanent" /> \n </rule> \n <rule name="styles redirection" stopProcessing="true"> \n <match url="^(.*)/(styles)/(.*)" ignoreCase="false" /> \n <conditions logicalGrouping="MatchAll"> \n <add input="{HTTP_HOST}" pattern="localhost" negate="false"/> \n </conditions> \n <action type="Rewrite" url=".tmp/styles/{R:3}" redirectType="Permanent" /> \n </rule>\n <rule name="AngularJS Routes" stopProcessing="true"> \n <match url=".*" /> \n <conditions logicalGrouping="MatchAll"> \n <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" /> \n <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" /> \n <add input="{REQUEST_URI}" pattern="^/(api)" negate="true" /> \n </conditions> \n <action type="Rewrite" url="/home" /> \n </rule> \n </rules> \n </rewrite>';
 
-    var path2 = 'App_Start/RouteConfig.cs';
+    var path2 = this.templatePath('App_Start/RouteConfig.cs');
     var hook2 = 'routes.IgnoreRoute("{resource}.axd/{*pathInfo}");';
     var file2 = fileToRead.readFileAsString(path2);
     var insert2 = 'routes.MapRoute( \n name: "Home", \n url: "home", \n defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional } \n    );\n \n routes.MapRoute( \n name: "About", \n url: "about", \n defaults: new { controller = "About", action = "Index", id = UrlParameter.Optional } \n    );';
 
     if (file1.indexOf(insert1) === -1) {
-      this.writeFileFromString(file1.replace(hook1, insert1 + '\n' + hook1), path1);
+      fileToRead.writeFileFromString(file1.replace(hook1, insert1 + '\n' + hook1), path1);
     }
 
     if (file2.indexOf(insert2) === -1) {
-      this.writeFileFromString(file2.replace(hook2, hook2 + '\n' + insert2), path2);
+      fileToRead.writeFileFromString(file2.replace(hook2, hook2 + '\n' + insert2), path2);
     }
     this.fs.copy(
       this.templatePath('_tmp/'),
