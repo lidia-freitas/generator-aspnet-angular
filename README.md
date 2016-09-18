@@ -26,7 +26,7 @@ yo aspnet-angular
 
 ## License
 
-MIT © [@lidia_defreitas]()
+MIT © [@lidia_defreitas](/license)
 
 
 [npm-image]: https://badge.fury.io/js/generator-aspnet-angular.svg
