@@ -1,38 +1,13 @@
-// Bosons
-@import "bosons/grid-settings";
 @import "bourbon";
 @import "neat";
 @import "normalize.scss";
 
-@import "bosons/vars";
-@import "bosons/mixins";
-@import "bosons/placeholders";
-@import "bosons/palette";
-@import "bosons/grid";
-@import "bosons/animations";
+@import "grid";
+@import "typography";
+@import "icons";
 
-// Quarks
-@import "quarks/typography";
-@import "quarks/tables";
-@import "quarks/lists";
-@import "quarks/icons";
+@import "header";
+@import "footer";
 
-// Atoms
-@import "atoms/forms";
-@import "atoms/buttons";
-@import "atoms/checkboxes";
-@import "atoms/radio";
-
-// Molecules
-
-
-
-// Organisms
-@import "organisms/header";
-@import "organisms/footer";
-
-
-
-// Templates
-@import "templates/base";
-@import "templates/home";
+@import "base";
+@import "home";

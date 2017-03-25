@@ -2,6 +2,11 @@
 > Asp.Net Project With AngularJS (Based on angular generator)
 > A Fork of [AngularJS Generator](https://github.com/yeoman/generator-angular) from the Yeoman team
 
+## Requirements
+* Visual Studio with .NET Framework 4.5.2
+* Node.js
+* Ruby SASS
+
 ## Installation
 
 First, install [Yeoman](http://yeoman.io) and generator-aspnet-angular using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
@@ -10,13 +15,39 @@ First, install [Yeoman](http://yeoman.io) and generator-aspnet-angular using [np
 npm install -g yo
 npm install -g generator-aspnet-angular
 ```
+Then, on Visual Studio, create a new ASP.NET Web Application (.NET Framework) and
+Select the template as follows:
 
-Then generate your new project:
+![alt text](images/aspnet-template.png "New ASP.NET Project")
+
+Then generate your new project from your ASP.NET Project folder:
 
 ```bash
 yo aspnet-angular
 ```
+This generator is based on official [yeoman angular-generator](https://github.com/yeoman/generator-angular), so the entire front-end structure will be created 
+inside of your ASP.NET project folder.
 
+This generator also going to modify some files in your ASP.NET project like 'web.config' and 'RouteConfig.cs' from App_Start folder, 
+and create some others like Views and Controllers.
+
+Before run your application in Visual Studio, remember to include this newly created Views and Controllers files in your project: 
+From Solution explorer sidebar mark 'Show all Files' option:
+
+![alt text](images/show-all-files-option.png "Show all Files") 
+
+Then right click on hidden files and choose 'Include In Project' option:
+
+![alt text](images/include-in-project-option.png "Include In Project")
+
+## Front-End Development workflow
+To create and edit the screens of your application, isn't necessary run your project from Visual Studio.
+To take advantage of all the features of the front-end development process like pre-processing css, javascript lint, livereload and package management 
+you must open project's folder from your command line tool and run:
+ ```bash
+ grunt serve
+ ``` 
+ 
 ## Getting To Know Yeoman
 
  * Yeoman has a heart of gold.

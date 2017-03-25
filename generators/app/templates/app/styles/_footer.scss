@@ -7,7 +7,7 @@
     margin: auto;
     display: block;
     position: absolute;
-    border-top: 0.1rem solid map-get($colorsNeutralScale, neutralBd);
+    border-top: 0.1rem solid #ccc;
     bottom: 0;
     padding: 1.3rem 0;
     font-size: 1.2rem;
@@ -17,6 +17,6 @@
     i{
         font-size: 1.2rem;
         margin-right: 0.5rem;
-        color: map-get($colorsNeutralScale, neutralBd);
+        color:#ccc;
     }
 }

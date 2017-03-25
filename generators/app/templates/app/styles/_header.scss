@@ -2,7 +2,7 @@
     @include outer-container;
     height: 6rem;
     margin-bottom: 3rem;
-    border-bottom: 0.1rem solid map-get($colorsNeutralScale, neutralBd);
+    border-bottom: 0.1rem solid #ccc;
 }
 
 .navbar{
