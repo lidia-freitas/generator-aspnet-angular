@@ -28,7 +28,7 @@ yo aspnet-angular
 This generator is based on official [yeoman angular-generator](https://github.com/yeoman/generator-angular), so the entire front-end structure will be created 
 inside of your ASP.NET project folder.
 
-This generator also going to modify some files in your ASP.NET project like 'web.config' and 'RouteConfig.cs' from App_Start folder, 
+This generator will also modify some files in your ASP.NET project like 'web.config' and 'RouteConfig.cs' from App_Start folder, 
 and create some others like Views and Controllers.
 
 Before run your application in Visual Studio, remember to include this newly created Views and Controllers files in your project: 
